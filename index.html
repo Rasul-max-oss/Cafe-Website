@@ -18,7 +18,31 @@
         </nav>
         <button class="btn">Заказать столик</button>
       </header>
-
+      <div class="booking-container">
+        <div id="booking-form" class="booking-form">
+            <div class="form-container">
+                <span class="close-form">&times;</span>
+                <h2>Заказать столик</h2>
+                <form>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+        
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="date" required>
+        
+                    <label for="time">Время:</label>
+                    <input type="time" id="time" name="time" required>
+        
+                    <button type="submit" class="btn">Забронировать</button>
+                </form>
+            </div>
+        </div>
+    
+      </div>
+      
       <section id="hero">
         <h1>Добро пожаловать в Cafe Delight</h1>
         <p>Лучшие блюда и напитки для вас</p>
@@ -131,8 +155,82 @@
     <section id="about">
         <h2>О нас</h2>
         <p>Cafe Delight - это место, где вы можете насладиться вкусной едой и уютной атмосферой. Мы используем только свежие ингредиенты и готовим блюда с любовью.</p>
-        <img src="images/Interior.png" alt="Интерьер кафе">
+        <div class="about-container">
+            <!-- Галерея изображений -->
+            <div class="gallery">
+                <img src="images/Interior.png" alt="Интерьер кафе" class="gallery-item" data-index="0">
+                <img src="images/interior_fl.png" alt="Интерьер кафе" class="gallery-item" data-index="1">
+                <img src="images/interior_second.png" alt="Интерьер кафе" class="gallery-item" data-index="2">
+            </div>
+    
+            <!-- Модальное окно (изначально скрыто) -->
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+                    <img id="modal-image" src="" alt="Увеличенное изображение">
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+        </div>
     </section>
 
+
+
+    <section id="promotions">
+        <h2>Акции и события</h2>
+        <div class="promotion-container">
+            <!-- Акция 1 -->
+            <div class="promotion-item">
+                <img src="images/happy_hours.png" alt="Счастливые часы" class="promotion-icon">
+                <h3>Счастливые часы</h3>
+                <p><strong>Каждый день с 15:00 до 17:00:</strong> скидка 20% на все напитки!</p>
+                <p>Приходите после работы и насладитесь любимыми напитками по выгодной цене.</p>
+            </div>
+    
+            <!-- Акция 2 -->
+            <div class="promotion-item">
+                <img src="images/live_music.png" alt="Живая музыка" class="promotion-icon">
+                <h3>Вечер живой музыки</h3>
+                <p><strong>Каждую пятницу вечером:</strong> живая музыка от местных исполнителей.</p>
+                <p>Насладитесь атмосферными мелодиями в уютной обстановке нашего кафе.</p>
+            </div>
+    
+            <!-- Акция 3 -->
+            <div class="promotion-item">
+                <img src="images/birthday_gift.png" alt="Подарок имениннику" class="promotion-icon">
+                <h3>Скидка 10% для именинников</h3>
+                <p><strong>Целую неделю до и после вашего дня рождения:</strong> скидка 10% на весь заказ!</p>
+                <p>Не забудьте показать документ, подтверждающий дату рождения.</p>
+            </div>
+    
+            <!-- Акция 4 -->
+            <div class="promotion-item">
+                <img src="images/dinner_for_two.png" alt="Ужин для двоих" class="promotion-icon">
+                <h3>Ужин для двоих</h3>
+                <p><strong>Специальное предложение:</strong> романтический ужин для двоих всего за $49.99!</p>
+                <p>Включает два основных блюда, закуски и десерт на выбор.</p>
+            </div>
+    
+            
+            <div class="promotion-item">
+                <img src="images/kids_menu.png" alt="Детское меню" class="promotion-icon">
+                <h3>Детское меню в подарок</h3>
+                <p><strong>При заказе от $50:</strong> детское меню бесплатно!</p>
+                <p>Идеальное предложение для семей с детьми.</p>
+            </div>
+    
+            
+            <div class="promotion-item">
+                <img src="images/loyalty_program.png" alt="Клуб лояльности" class="promotion-icon">
+                <h3>Клуб лояльности</h3>
+                <p><strong>Станьте участником нашего клуба лояльности:</strong> получайте бонусные баллы за каждый заказ.</p>
+                <p>10% от суммы заказа начисляются на ваш счет и могут быть использованы для оплаты будущих заказов.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="forms.js"></script>
 </body>
 </html>
