@@ -9,7 +9,12 @@
 <body>
     <header>
         <a href="#" class="logo">Cafe Delight</a>
-        <nav>
+        <button class="hamburger" aria-label="Открыть меню">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="navbar">
           <ul>
             <li><a href="#menu">Меню</a></li>
             <li><a href="#reviews">Отзывы</a></li>
@@ -17,8 +22,8 @@
           </ul>
         </nav>
         <button class="btn">Заказать столик</button>
-      </header>
-      <div class="booking-container">
+    </header>
+    <div class="booking-container">
         <div id="booking-form" class="booking-form">
             <div class="form-container">
                 <span class="close-form">&times;</span>
@@ -41,15 +46,15 @@
             </div>
         </div>
     
-      </div>
-      
-      <section id="hero">
+    </div>
+    
+    <section id="hero">
         <h1>Добро пожаловать в Cafe Delight</h1>
         <p>Лучшие блюда и напитки для вас</p>
         <button class="btn">Заказать столик</button>
-      </section>
+    </section>
 
-      <section id="menu">
+    <section id="menu">
         <h2>Меню кафе</h2>
         <div class="menu-items">
     
@@ -230,7 +235,8 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-    <script src="forms.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/forms.js"></script>
+    <script src="scripts/hamburger.js"></script>
 </body>
 </html>
